@@ -26,7 +26,11 @@ baseurl: "web-security-course" # the subpath of your site, e.g. /blog
 url: "https://lucasnathan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lucasnathan
 
+# Just the Docs-specific settings
+favicon_ico: "/favicon.png"
+
 # Build settings
+theme: just-the-docs
 remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-feed
