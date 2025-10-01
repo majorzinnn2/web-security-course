@@ -21,7 +21,7 @@
 title: Curso de Segurança Web
 email: lucasnathan80@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Um curso prático de segurança web, cobrindo desde os fundamentos como OWASP e ciclo de desenvolvimento seguro, até a exploração de vulnerabilidades como SQL Injection, XXE, falhas de autenticação e ataques a OAuth.
+  Mergulhe no mundo da segurança web com este curso prático e abrangente. Aprenda os fundamentos essenciais, como a Tríade CIA, metodologias de pentest e o Ciclo de Desenvolvimento Seguro (SDLC). Domine as principais vulnerabilidades do OWASP Top 10, incluindo Injeção (SQL, XXE), falhas de autenticação, configurações inseguras e ataques avançados como CSRF e exploração de OAuth. Utilize ferramentas profissionais como o Burp Suite em laboratórios práticos da PortSwigger para solidificar seu conhecimento e se preparar para os desafios do mundo real.
 baseurl: "web-security-course" # the subpath of your site, e.g. /blog
 url: "https://lucasnathan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lucasnathan

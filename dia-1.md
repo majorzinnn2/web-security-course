@@ -155,12 +155,84 @@ Basicamente todos os seguem uma estrutura semelhante, neste curso seguiremos as 
 * **Mapeamento**: Nesta etapa, o testador cria um mapa do sistema alvo, identificando os pontos de entrada, serviços em execução, portas abertas, etc. Isso pode ser feito através de técnicas como varredura de portas, análise de serviços, etc.
 * **Exploração e Análise**: Nesta etapa, o testador tenta explorar as vulnerabilidades identificadas nas etapas anteriores. Isso pode ser feito através de técnicas como injeção de SQL, XSS, brute force, etc. O objetivo é identificar quais vulnerabilidades podem ser exploradas e quais são os impactos potenciais.
 * **Pós-exploração**: Nesta etapa, o testador analisa o sistema após a exploração, buscando informações adicionais, escalando privilégios, etc.
-* **Reporte (Relatório)**: Nesta etapa, o testador documenta suas descobertas, incluindo vulnerabilidades identificadas, métodos de exploração, impactos potenciais e recomendações para mitigação. O relatório deve ser claro, conciso e direcionado ao público-alvo, seja ele técnico ou executivo.
+* **Reporte (Relatório)**: Nesta etapa, o testador documenta suas descobertas, incluindo vulnerabilidades identificadas, métodos de exploração, impactos potenciais e recomendações para mitigação. O relatório deve ser claro, conciso e direcionado ao público-alvo, seja ele técnico ou executivo. Um bom relatório contem as seguintes informações:
+    - Resumo executivo: Descreve os objetivos do teste, escopo, principais descobertas, recomendações de alto nível, nível de risco geral e conclusão.
+    - Metodologia utilizada: Descreve as etapas e técnicas utilizadas durante o teste.
+    - Vulnerabilidades identificadas: Lista detalhada das vulnerabilidades encontradas, incluindo:
+        - Descrição da vulnerabilidade
+        - Localização (URL, IP, etc.)
+        - Severidade (baixa, média, alta, crítica)
+        - Passos para reproduzir a vulnerabilidade
+        - Evidências (prints, logs, etc.)
+        - Impacto potencial
+        - Recomendações para mitigação
+        - Análise de risco: Avaliação do risco associado a cada vulnerabilidade, considerando a probabilidade de exploração e o impacto potencial.
+    - Conclusão
+
+## Análise de Risco
+
+Existem várias metodologias para realizar a análise de risco, cada uma com seu próprio conjunto de etapas e processos. Algumas das metodologias mais conhecidas incluem:
+*   **NIST SP 800-30**: Um guia publicado pelo Instituto Nacional de Padrões e Tecnologia dos EUA que fornece diretrizes para conduzir análises de risco em sistemas de informação.
+*   **ISO/IEC 27005**: Uma norma internacional que fornece diretrizes para a gestão de riscos de segurança da informação.
+*   **OCTAVE (Operationally Critical Threat, Asset, and Vulnerability Evaluation)**: Uma metodologia desenvolvida pela Carnegie Mellon University que se concentra na avaliação de riscos em organizações.
+*   **FAIR (Factor Analysis of Information Risk)**: Uma metodologia que fornece um framework para quantificar e gerenciar riscos de segurança da informação.
+*  **CRAMM (CCTA Risk Analysis and Management Method)**: Uma metodologia desenvolvida pelo governo do Reino Unido que fornece um conjunto de etapas para conduzir análises de risco em sistemas de informação.
+*  **CVSS (Common Vulnerability Scoring System)**: Um padrão aberto para avaliar a severidade das vulnerabilidades de segurança em sistemas de informação. O CVSS fornece uma pontuação numérica que representa o risco associado a uma vulnerabilidade, permitindo que as organizações priorizem suas ações de mitigação com base na gravidade das ameaças identificadas.
+
+Neste curso focaremos na metodologia **CVSS** para análise de risco, que é amplamente utilizada na indústria de segurança da informação. A metodologia CVSS é composta por três métricas principais:
+    - **Base Score (BS)**: Mede a gravidade da vulnerabilidade com base em características intrínsecas, como o vetor de ataque, complexidade do ataque, privilégios necessários, interação do usuário, escopo e impacto na confidencialidade, integridade e disponibilidade.
+    - **Temporal Score (TS)**: Mede a gravidade da vulnerabilidade com base em fatores que podem mudar ao longo do tempo, como a existência de exploits conhecidos, a disponibilidade de patches e a confiabilidade das fontes de informação.
+    - **Environmental Score (ES)**: Mede a gravidade da vulnerabilidade com base em fatores específicos do ambiente, como a importância dos ativos afetados, a presença de controles de segurança e o impacto potencial na organização.
+
+Cada uma dessas métricas é composta por vários sub-métricas que são avaliadas para calcular a pontuação final. A pontuação final varia de 0 a 10, onde 0 representa um risco mínimo e 10 representa um risco crítico.
+
+Para calcular a pontuação CVSS, você pode usar a calculadora oficial disponível no site do FIRST (Forum of Incident Response and Security Teams): [https://www.first.org/cvss/calculator/3.1](https://www.first.org/cvss/calculator/3.1)
+
+Neste curso utilizaremos apenas a Base Score (BS) do CVSS 3.1 para análise de risco, que é composta pelas seguintes sub-métricas:
+- **Attack Vector (AV)**: Mede o vetor de ataque utilizado para explorar a vulnerabilidade. Pode ser:
+    - Network (N): A vulnerabilidade pode ser explorada remotamente através da rede.
+    - Adjacent (A): A vulnerabilidade pode ser explorada a partir de uma rede adjacente.
+    - Local (L): A vulnerabilidade pode ser explorada localmente, ou seja, o atacante precisa ter acesso físico ou lógico ao sistema.
+    - Physical (P): A vulnerabilidade pode ser explorada através de acesso físico ao dispositivo.
+- **Attack Complexity (AC)**: Mede a complexidade do ataque necessário para explorar a vulnerabilidade. Pode ser:
+    - Low (L): O ataque é simples e não requer habilidades especiais.
+    - High (H): O ataque é complexo e requer habilidades especiais.
+- **Privileges Required (PR)**: Mede os privilégios necessários para explorar a vulnerabilidade. Pode ser:
+    - None (N): Nenhum privilégio é necessário.
+    - Low (L): Privilégios de usuário padrão são necessários.
+    - High (H): Privilégios administrativos são necessários.
+- **User Interaction (UI)**: Mede se a interação do usuário é necessária para explorar a vulnerabilidade. Pode ser:
+    - None (N): Nenhuma interação do usuário é necessária.
+    - Required (R): A interação do usuário é necessária.
+- **Scope (S)**: Mede se a vulnerabilidade afeta apenas o componente vulnerável ou se afeta outros componentes do sistema. Pode ser:
+    - Unchanged (U): A vulnerabilidade afeta apenas o componente vulnerável.
+    - Changed (C): A vulnerabilidade afeta outros componentes do sistema.
+- **Confidentiality (C)**: Mede o impacto na confidencialidade dos dados. Pode ser:
+    - None (N): Nenhum impacto na confidencialidade.
+    - Low (L): Impacto limitado na confidencialidade.
+    - High (H): Impacto significativo na confidencialidade.
+- **Integrity (I)**: Mede o impacto na integridade dos dados. Pode ser:
+    - None (N): Nenhum impacto na integridade.
+    - Low (L): Impacto limitado na integridade.
+    - High (H): Impacto significativo na integridade.
+- **Availability (A)**: Mede o impacto na disponibilidade dos dados. Pode ser:
+    - None (N): Nenhum impacto na disponibilidade.
+    - Low (L): Impacto limitado na disponibilidade.
+    - High (H): Impacto significativo na disponibilidade.
+Com base nas respostas para cada uma dessas sub-métricas, você pode calcular a pontuação Base Score (BS) usando a fórmula fornecida na documentação oficial do CVSS 3.1.
 
 ## Ferramentas: Burp Suite Community e PortSwigger Web Security Academy
 ![Burp Suite]({{ '/assets/images/burp.png' | relative_url }})
 
-O Burp Suite é uma plataforma integrada para realizar testes de segurança em aplicações web. Ele oferece uma variedade de ferramentas que ajudam os testadores a identificar e explorar vulnerabilidades em aplicações web. A versão Community é gratuita e oferece funcionalidades básicas. Algumas das principais ferramentas do Burp Suite incluem:
+O Burp Suite é uma plataforma integrada para realizar testes de segurança em aplicações web. Ele oferece uma variedade de ferramentas que ajudam os testadores a identificar e explorar vulnerabilidades em aplicações web. A versão Community é gratuita e oferece funcionalidades básicas. 
+
+Primeiro vamos instalar o Burp Suite Community, você pode baixar ele no site oficial: [https://portswigger.net/burp/communitydownload](https://portswigger.net/burp/communitydownload)
+
+Em seguida, siga os passos para instalar e configurar o Burp Suite Community no seu sistema operacional.
+
+Neste curso utilizaremos o navegador do proprio Burp Suite, chamado de Burp Browser, que já vem configurado para trabalhar com o Burp Suite. Entretanto, você também pode configurar o seu navegador preferido (como Firefox ou Chrome) para trabalhar com o Burp Suite, caso queira. Você pode seguir os passos descritos na documentação oficial: [https://portswigger.net/burp/documentation/desktop/getting-started/proxy-setup](https://portswigger.net/burp/documentation/desktop/getting-started/proxy-setup) par realizar essa configuração no su browser favorito.
+
+Algumas das principais ferramentas do Burp Suite incluem:
 
 - **Proxy**: Permite interceptar e modificar o tráfego HTTP/S entre o navegador e o servidor web.
 - **Repeater**: Permite enviar requisições HTTP/S personalizadas para o servidor e analisar as respostas.
@@ -172,8 +244,42 @@ Além do Burp Suite, a PortSwigger oferece a Web Security Academy, uma plataform
 
 Para o nosso curso utilizaremos os laboratórios da Web Security Academy para praticar as técnicas que aprenderemos. Vamos iniciar?
 
-Primeiro vamos instalar o Burp Suite Community, você pode baixar ele no site oficial: [https://portswigger.net/burp/communitydownload](https://portswigger.net/burp/communitydownload)
+## Atividade prática
 
-Em seguida, siga os passos para instalar e configurar o Burp Suite Community no seu sistema operacional.
+Vamos praticar o que aprendemos até agora! Acesse a Web Security Academy. Vamos explorar um laboratório prático juntos. Neste laboratório você deverá utilizar o burp suite para identificar e explorar uma vulnerabilidade que permite acessar informações internas do sistema. Ao final voce deverá documentar suas descobertas e preparar um relatório com as vulnerabilidades identificadas e recomendações para mitigação.
 
-Neste curso utilizaremos o navegador do proprio Burp Suite, chamado de Burp Browser, que já vem configurado para trabalhar com o Burp Suite. Entretanto, você também pode configurar o seu navegador preferido (como Firefox ou Chrome) para trabalhar com o Burp Suite, caso queira. Você pode seguir os passos descritos na documentação oficial: [https://portswigger.net/burp/documentation/desktop/getting-started/proxy-setup](https://portswigger.net/burp/documentation/desktop/getting-started/proxy-setup) par realizar essa configuração no su browser favorito.
+<!-- TODO: Adicionar o link e a descrição do laboratório específico da Web Security Academy aqui.
+
+[Link-lab](Link-lab)
+
+## Resolução do laboratório
+
+1. Acesse o laboratório através do link: [Link-lab](Link-lab)
+
+2. Use o Burp Suite para interceptar o tráfego HTTP/S entre o navegador e o servidor web.
+
+3. Navegue pela aplicação web e identifique possíveis vulnerabilidades.
+
+4. Analise o GET /product?productId=1 e veja se é possível manipular o parâmetro productId para acessar outros produtos.
+
+5. Envie a requisição para o Repeater e modifique o valor do parâmetro productId para um valor diferente, como 1 ou "1".
+
+6. Observe a resposta do servidor e veja se é possível acessar informações internas do sistema.
+
+7. Documente suas descobertas e prepare um relatório com as vulnerabilidades identificadas e recomendações para mitigação.-->
+
+
+
+## Desafio extra
+
+Hoje se inicia o Hacktoberfest 2025, um evento anual que incentiva a contribuição para projetos de código aberto durante o mês de outubro. Para participar, entre no link:  [https://hacktoberfest.com//](https://hacktoberfest.com/)
+
+utilizando este projeto como base, você pode seguir os seguintes passos:
+1. **Fork este repositório**: Crie uma cópia deste repositório na sua conta do GitHub.
+2. **Clone o repositório forkado**: Baixe o repositório para o seu ambiente local.
+3. **Crie uma branch**: Crie uma nova branch para fazer suas alterações.
+4. **Envie seu relatório**: Adicione um novo arquivo markdown (.md) na pasta `_posts` com o formato `YYYY-MM-DD-nome-do-arquivo.md`, onde `YYYY-MM-DD` é a data atual e `nome-do-arquivo` é o seu nome (ou nickname, pois o repositório é público). No arquivo, preeencha o template de teste de intrusão detalhando a vulnerabilidade encontrada.
+5. **Commit e push**: Faça commit das suas alterações e envie para o seu repositório forkado.
+6. **Abra um Pull Request**: Vá até o repositório original e abra um Pull Request com suas alterações.
+
+Para cada Lab que você resolver, você pode criar um novo arquivo markdown seguindo o mesmo formato.
