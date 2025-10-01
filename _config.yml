@@ -27,7 +27,7 @@ url: "https://lucasnathan.github.io" # the base hostname & protocol for your sit
 github_username:  lucasnathan
 
 # Build settings
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
