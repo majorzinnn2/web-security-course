@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Sobre
+nav_order: 1
 ---
 # Sobre o Curso
 

@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# Use the latest version of Jekyll
-gem "jekyll"
+# Use a recent version of Jekyll
+gem "jekyll", "~> 4.3"
 
 # This is the theme you are using in _config.yml
 gem "just-the-docs"
