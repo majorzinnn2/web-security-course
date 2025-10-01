@@ -6,7 +6,7 @@ nav_order: 2
 
 # Dia 1: Introdução à Segurança Web
 
-Neste primeiro dia, vamos cobrir os conceitos fundamentais que formam a base da segurança de aplicações web, desde os princípios teóricos até as ferramentas e metodologias práticas.
+Bem-vindo ao primeiro dia do nosso curso de segurança web! Hoje, construiremos a fundação do seu conhecimento, explorando os pilares essenciais da cibersegurança. Começaremos com a Tríade CIA (Confidencialidade, Integridade e Disponibilidade), entenderemos os diferentes tipos de atacantes e mergulharemos no Ciclo de Desenvolvimento Seguro (SDLC). Além disso, vamos desmistificar o que é a OWASP e seu famoso Top 10, e apresentar as metodologias e ferramentas, como o Burp Suite, que serão cruciais para sua jornada prática.
 
 ## Segurança cibernética
 
@@ -35,7 +35,7 @@ Os atacantes podem ser classificados em várias categorias, incluindo:
 
 ![hacktivista]({{ '/assets/images/hacktivista.png' | relative_url }})
 
-- **Estados Nacionais**: Governos que conduzem operações cibernéticas para espionagem, sabotagem ou guerra cibernética.   
+- **Hackers de Estado**: Governos que conduzem operações cibernéticas para espionagem, sabotagem ou guerra cibernética.   
 
 ![nacional]({{ '/assets/images/nacional.png' | relative_url }})
 
@@ -67,6 +67,7 @@ O Ciclo de Desenvolvimento Seguro (ou Secure Development Lifecycle - SDLC) é um
     - Information Disclosure (Divulgação de informações)
     - Denial of Service (Negação de serviço)
     - Elevation of Privilege (Elevação de privilégio)
+    
     A ideia é que cada uma dessas categorias representa um tipo diferente de ameaça que pode afetar a segurança de um sistema. E nós devemos criar um documento que aborde cada uma dessas categorias, identificando as ameaças específicas que podem afetar o sistema e definindo medidas para mitigá-las.
 
     A sigla **ASVS** significa:
