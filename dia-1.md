@@ -43,7 +43,7 @@ Os atacantes podem ser classificados em várias categorias, incluindo:
 
 ![CIA]({{ '/assets/images/cia.png' | relative_url }})
 
-## (Confidencialidade, Integridade e Disponibilidade)
+### (Confidencialidade, Integridade e Disponibilidade)
 O modelo CIA é um dos pilares da segurança da informação. Ele se concentra em três princípios fundamentais:
 
 ![Ilustração da Tríade CIA]({{ '/assets/images/triade-cia.png' | relative_url }})
@@ -54,7 +54,7 @@ O modelo CIA é um dos pilares da segurança da informação. Ele se concentra e
 
 3. **Disponibilidade**: Garante que a informação e os sistemas estejam disponíveis para os usuários autorizados quando necessário. Isso pode incluir redundância, backups e planos de recuperação de desastres.
 
-## Ciclo de Desenvolvimento Seguro (SDLC - Secure Development Life Cycle)
+### Ciclo de Desenvolvimento Seguro (SDLC - Secure Development Life Cycle)
 
 O Ciclo de Desenvolvimento Seguro (ou Secure Development Lifecycle - SDLC) é uma abordagem para o desenvolvimento de software que integra a segurança em todas as fases do processo, desde o planejamento inicial até o descomissionamento do sistema. O objetivo é construir software mais seguro desde o início, em vez de tentar consertar vulnerabilidades depois que o produto já foi lançado, o que é muito mais caro e arriscado. Quanto mais cedo a segurança for considerada no ciclo de vida do desenvolvimento, menor será o custo e o impacto das vulnerabilidades.
 
@@ -112,8 +112,28 @@ O Ciclo de Desenvolvimento Seguro (ou Secure Development Lifecycle - SDLC) é um
     - Nmap
     - Wireshark
 
-2.  **OWASP (Open Web Application Security Project)**
-    *   *Espaço para desenvolver o conteúdo...*
+### OWASP (Open Web Application Security Project) 
+
+Agora que já entendemos os conceitos básicos de segurança cibernética, podemos explorar o OWASP, uma organização sem fins lucrativos dedicada a melhorar a segurança de software. O OWASP é conhecido por seus projetos, ferramentas e recursos que ajudam desenvolvedores e profissionais de segurança a criar aplicações mais seguras.
+Os projetos mais conhecidos do OWASP incluem:
+- **OWASP Top Ten**: Uma lista das dez principais vulnerabilidades de segurança em aplicações web, atualizada periodicamente. A lista mais recente (2021) inclui:
+    1. **Broken Access Control**: Falhas de Controle de Acesso que permitem que usuários não autorizados acessem recursos ou funcionalidades restritas.
+    2. **Cryptographic Failures**: Falhas na implementação de criptografia que podem levar à exposição de dados sensíveis.
+    3. **Injection**: Falhas que permitem a injeção de código malicioso em aplicações, como SQL Injection e Command Injection.
+    4. **Insecure Design**: Falhas de design que comprometem a segurança da aplicação desde o início.
+    5. **Security Misconfiguration**: Configurações inadequadas que podem expor a aplicação a riscos de segurança.
+    6. **Vulnerable and Outdated Components**: Uso de bibliotecas ou componentes desatualizados com vulnerabilidades conhecidas.
+    7. **Identification and Authentication Failures**: Falhas na identificação e autenticação de usuários, como senhas fracas ou falta de autenticação multifator.
+    8. **Software and Data Integrity Failures**: Falhas que comprometem a integridade do software e dos dados, como a falta de verificação de integridade.
+    9. **Security Logging and Monitoring Failures**: Falhas na implementação de logging e monitoramento de segurança, dificultando a detecção de atividades maliciosas.
+    10. **Server-Side Request Forgery (SSRF)**: Vulnerabilidades que permitem que um atacante faça requisições não autorizadas a partir do servidor.
+
+- **OWASP ASVS (Application Security Verification Standard)**: Um framework que fornece um conjunto de requisitos de segurança para aplicações web, ajudando desenvolvedores a garantir que suas aplicações atendam a padrões mínimos de segurança.
+- **OWASP ZAP (Zed Attack Proxy)**: Uma ferramenta de teste de segurança de aplicações web que ajuda a identificar vulnerabilidades em aplicações web durante o desenvolvimento e testes.
+- **OWASP Cheat Sheets**: Uma coleção de guias práticos que fornecem melhores práticas para desenvolver aplicações seguras.
+- **OWASP Dependency-Check**: Uma ferramenta que identifica bibliotecas de terceiros com vulnerabilidades conhecidas em projetos de software.
+
+Segue o site oficial do OWASP: [https://owasp.org/](https://owasp.org/)
 
 4.  **Metodologia de Pentesting (PTES, OSSTMM, etc.)**
     *   4.1. Preparação
