@@ -62,14 +62,14 @@ Lab: Host header authentication bypass
 
 Neste exercício, você irá explorar uma vulnerabilidade de design inseguro usando a ferramenta Burp Suite. A vulnerabilidade está relacionada à confiança excessiva nos controles do lado do cliente, permitindo que você manipule os dados enviados ao servidor para obter um benefício não autorizado.
 
-<!--
+<!---
 
 [https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls](https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls)  
 
 ### Resolução do Laboratório
 
 1.  Com o Burp em execução, faça login e tente comprar a jaqueta de couro. O pedido é rejeitado porque você não tem crédito suficiente na loja.
-2.  No Burp, vá para "Proxy" > "HTTP history" e estude o processo de pedido. Observe que, ao adicionar um item ao seu carrinho, a requisição correspondente contém um parâmetro `price`. Envie a requisição `POST /cart` para o Burp Repeater.
+2.  No Burp, vá para "Proxy" - "HTTP history" e estude o processo de pedido. Observe que, ao adicionar um item ao seu carrinho, a requisição correspondente contém um parâmetro `price`. Envie a requisição `POST /cart` para o Burp Repeater.
 3.  No Burp Repeater, altere o `price` para um valor inteiro arbitrário e envie a requisição. Atualize o carrinho e confirme que o preço foi alterado com base na sua entrada.
 4.  Repita este processo para definir o preço para qualquer valor menor que o seu crédito disponível na loja.
 5.  Conclua o pedido para resolver o laboratório.
