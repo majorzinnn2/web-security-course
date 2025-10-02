@@ -248,13 +248,13 @@ Para o nosso curso utilizaremos os laboratórios da Web Security Academy para pr
 
 Vamos praticar o que aprendemos até agora! Acesse a Web Security Academy. Vamos explorar um laboratório prático juntos. Neste laboratório você deverá utilizar o burp suite para identificar e explorar uma vulnerabilidade que permite acessar informações internas do sistema. Ao final voce deverá documentar suas descobertas e preparar um relatório com as vulnerabilidades identificadas e recomendações para mitigação.
 
-<!-- TODO: Adicionar o link e a descrição do laboratório específico da Web Security Academy aqui.
+Eu vou adicionar o link do laboratório aqui, mas você pode entrar na sua própria conta na Web Security Academy e escolher o laboratório diretamente por lá.
 
-[Link-lab](Link-lab)
+[Lab: Information disclosure in error messages](https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-in-error-messages)
 
 ## Resolução do laboratório
 
-1. Acesse o laboratório através do link: [Link-lab](Link-lab)
+1. Acesse o laboratório através do link: [Lab: Information disclosure in error messages](https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-in-error-messages)
 
 2. Use o Burp Suite para interceptar o tráfego HTTP/S entre o navegador e o servidor web.
 
@@ -266,7 +266,13 @@ Vamos praticar o que aprendemos até agora! Acesse a Web Security Academy. Vamos
 
 6. Observe a resposta do servidor e veja se é possível acessar informações internas do sistema.
 
-7. Documente suas descobertas e prepare um relatório com as vulnerabilidades identificadas e recomendações para mitigação.-->
+7. Documente suas descobertas e prepare um relatório com as vulnerabilidades identificadas e recomendações para mitigação.
+
+<!-- TODO: Adicionar o link e a descrição do laboratório específico da Web Security Academy aqui.
+
+[Link-lab](Link-lab)
+
+-->
 
 
 
@@ -283,3 +289,4 @@ utilizando este projeto como base, você pode seguir os seguintes passos:
 6. **Abra um Pull Request**: Vá até o repositório original e abra um Pull Request com suas alterações.
 
 Para cada Lab que você resolver, você pode criar um novo arquivo markdown seguindo o mesmo formato.
+
