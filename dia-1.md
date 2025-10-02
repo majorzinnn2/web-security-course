@@ -252,6 +252,8 @@ Eu vou adicionar o link do laboratório aqui, mas você pode entrar na sua próp
 
 [Lab: Information disclosure in error messages](https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-in-error-messages)
 
+[Lab direto](https://0a40002a04f1cb6f83da978a0011002f.web-security-academy.net/)
+
 <!-- 
 
 ## Resolução do laboratório
