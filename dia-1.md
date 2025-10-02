@@ -252,6 +252,8 @@ Eu vou adicionar o link do laboratório aqui, mas você pode entrar na sua próp
 
 [Lab: Information disclosure in error messages](https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-in-error-messages)
 
+<!-- 
+
 ## Resolução do laboratório
 
 1. Acesse o laboratório através do link: [Lab: Information disclosure in error messages](https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-in-error-messages)
@@ -268,7 +270,7 @@ Eu vou adicionar o link do laboratório aqui, mas você pode entrar na sua próp
 
 7. Documente suas descobertas e prepare um relatório com as vulnerabilidades identificadas e recomendações para mitigação.
 
-<!-- TODO: Adicionar o link e a descrição do laboratório específico da Web Security Academy aqui.
+
 
 [Link-lab](Link-lab)
 

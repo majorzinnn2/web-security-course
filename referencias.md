@@ -23,6 +23,9 @@ Uma boa leitura é fundamental para construir uma base sólida. Abaixo estão al
 *   **Livro:** *The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws*
     *   **Autor(es):** Dafydd Stuttard e Marcus Pinto
     *   **Descrição:** Nunca consultei, mas tenho aqui e sempre vejo o pessoal recomendando, então segue a recomendação também.
+## Lugares pra comprar livros
+
+*   [Humble Bundle](https://www.humblebundle.com/books)
 
 ## Canais no YouTube
 
