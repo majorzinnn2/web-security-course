@@ -61,7 +61,9 @@ Lab: Host header authentication bypass
 ## Exercício de Design Inseguro
 
 Neste exercício, você irá explorar uma vulnerabilidade de design inseguro usando a ferramenta Burp Suite. A vulnerabilidade está relacionada à confiança excessiva nos controles do lado do cliente, permitindo que você manipule os dados enviados ao servidor para obter um benefício não autorizado.
+
 <!--
+
 [https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls](https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls)  
 
 ### Resolução do Laboratório
@@ -71,6 +73,7 @@ Neste exercício, você irá explorar uma vulnerabilidade de design inseguro usa
 3.  No Burp Repeater, altere o `price` para um valor inteiro arbitrário e envie a requisição. Atualize o carrinho e confirme que o preço foi alterado com base na sua entrada.
 4.  Repita este processo para definir o preço para qualquer valor menor que o seu crédito disponível na loja.
 5.  Conclua o pedido para resolver o laboratório.
+
 -->
 
 ## Exercício de Criptografia Fraca
